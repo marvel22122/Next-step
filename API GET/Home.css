@@ -1,0 +1,644 @@
+:root{
+    --myblue: #1e2e3d;
+    --boxShadow: 5px 5px 5px rgba(199, 192, 192, 0.1);
+    --heroBg: rgb(63,63,209);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s linear;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    font-display: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fafafa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border: dashed;
+}
+
+header .logo{
+    width: 10%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo img{
+    width: 55%;
+    height: 60px;
+    border-radius: 50%;
+}
+
+header .desktopNav{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .desktopNav .myNav{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .desktopNav .myNav li{
+    list-style: none;
+}
+
+header .desktopNav .myNav li a{
+    color: var(--myblue);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 5px;
+    position: relative;
+}
+
+header .desktopNav .myNav li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: var(--myblue);
+    transition: all .3s;
+}
+
+header .desktopNav .myNav li a:hover::after{
+    width: 100%;
+}
+
+header .desktopNav .myNav li a.current{
+    color: white;
+    background-color: var(--myblue);
+}
+
+header .desktopNav  .account{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header  .account a{
+    background-color: transparent;
+    color: var(--myblue);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    border: solid 1px var(--myblue);
+}
+
+header  .account a:hover{
+    color: white;
+    background-color: var(--myblue);
+}
+.main-container{
+    margin-top: 200px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
+
+.main-container .hero-section{
+    width: 80vw;
+    height: 70vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.main-container .hero-section .hero-wrapper{
+    width: 80%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 50px;
+    background-color: var(--heroBg);
+    color: white;
+}
+
+.main-container .hero-section .hero-wrapper a{
+    height: 50px;
+    width: auto;
+    display: flex;
+    font-display: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: var(--myblue);
+    color: white;
+}
+
+.hero-section{
+    background-image: url(./images/hero-1.jpg);
+}
+
+.main-container .recent-posts{
+    width: 80vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    border: dashed;
+    background-color: #333;
+}
+.main-container .recent-posts .h2{
+    width: 70vw;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 40%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+.main-container .recent-posts .posts-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: dashed;
+    background-color:white;
+}
+
+.main-container .recent-posts .posts-wrapper .post{
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5px;
+    background-color:white;
+    gap: 20px;
+    font-size: large;
+}
+
+.main-container .recent-posts .posts-wrapper .post .cover-image{
+    width: 100%;
+    height: 150px;
+}
+.main-container .recent-posts .posts-wrapper .post .author{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    border: dashed;
+}
+.main-container .recent-posts .posts-wrapper .post .author .MARVEL{
+    width: 30%;
+    border: dashed;
+    border-radius: 70%;
+}
+footer {
+  background-color: #3f3fc7d4;
+  color: hsl(0, 0%, 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: dashed;
+  background-origin: white;
+}
+
+.left {
+  width: 20%;
+}
+
+.left img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.center {
+  width: 25%;
+  height: 30vw;
+  padding-top: 36px;
+}
+
+.center ul {
+ width: 100%;
+ height: 20vw;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 15px;
+}
+
+.center ul h5 {
+  width: 55%;
+  height: 15%;
+  color: rgb(5, 5, 5);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-style: 1.1em;
+  background-color: white;
+  text-align: center;
+  align-items: end;
+  padding-top: 10px;
+  padding-right: 70px;
+}
+
+
+.right {
+  width: 30%;
+  color: #fafafa;
+}
+
+.right h5 {
+  margin-bottom: 10px;
+  color: #fafafa;
+}
+
+address {
+  font-style: normal;
+}
+.center .h5{
+    background-color: white;
+    color: white;
+    width: 20px;
+    height: 10px;
+    padding-right: 20px;
+}
+footer img{
+    width: 20px;@media
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+/* Media Queries*/
+@media (max-width:500px) {
+    header{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        font-display: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fafafa;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border: dashed red;
+    }
+    
+    header .logo{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    
+    header .logo img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%
+       
+    }
+    header .logo img #menu-btn{ 
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: var(--myblue);
+        font-size: 30px;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-left: 30px;
+    }
+
+    header .desktopNav #close-btn{
+        color: var(--myblue);
+        font-size: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    header .desktopNav{
+        width: 60vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+        padding-left: 10px;
+        gap: 20px;
+    }
+    
+    header .desktopNav .myNav{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    header .desktopNav .myNav li{
+        list-style: none;
+    }
+    
+    header .desktopNav .myNav li a{
+        color: var(--myblue);
+        font-size: 17px;
+        text-decoration: none;
+        padding: 5px;
+        position: relative;
+    }
+    
+    header .desktopNav .myNav li a::after{
+        content: "";
+        width: 0;
+        height: 3px;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        background-color: var(--myblue);
+        transition: all .3s;
+    }
+    
+    header .desktopNav .myNav li a:hover::after{
+        width: 100%;
+    }
+    
+    header .desktopNav .myNav li a.current{
+        color: white;
+        background-color: var(--myblue);
+    }
+    
+    header .desktopNav  .account{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    header  .account a{
+        background-color: transparent;
+        color: var(--myblue);
+        font-size: 17px;
+        text-decoration: none;
+        padding: 7px;
+        border-radius: 3px;
+        border: solid 1px var(--myblue);
+    }
+    
+    header  .account a:hover{
+        color: white;
+        background-color: var(--myblue);
+    }
+    .main-container{
+        margin-top: 200px;
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+    }
+    
+    .main-container .hero-section{
+        width: 80vw;
+        height: 70vh;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .main-container .hero-section .hero-wrapper{
+        width: 80%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 50px;
+        background-color: var(--heroBg);
+        color: white;
+    }
+    
+    .main-container .hero-section .hero-wrapper a{
+        height: 50px;
+        width: auto;
+        display: flex;
+        font-display: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        text-decoration: none;
+        border-radius: 4px;
+        background-color: var(--myblue);
+        color: white;
+    }
+    
+    .hero-section{
+        background-image: url(./images/hero-1.jpg);
+    }
+    
+    .main-container .recent-posts{
+        width: 80vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        border: dashed;
+        background-color: #333;
+    }
+    .main-container .recent-posts .h2{
+        width: 70vw;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 40%;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+    }
+    .main-container .recent-posts .posts-wrapper{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: dashed;
+        background-color:white;
+    }
+    
+    .main-container .recent-posts .posts-wrapper .post{
+        width: 25%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 5px;
+        background-color:white;
+        gap: 20px;
+        font-size: large;
+    }
+    
+    .main-container .recent-posts .posts-wrapper .post .cover-image{
+        width: 100%;
+        height: 150px;
+    }
+    .main-container .recent-posts .posts-wrapper .post .author{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        border: dashed;
+    }
+    .main-container .recent-posts .posts-wrapper .post .author .MARVEL{
+        width: 30%;
+        border: dashed;
+        border-radius: 70%;
+    }
+    footer {
+      background-color: #3f3fc7d4;
+      color: hsl(0, 0%, 100%);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      border: dashed;
+      background-origin: white;
+    }
+    
+    .left {
+      width: 20%;
+    }
+    
+    .left img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    
+    .center {
+      width: 25%;
+      height: 30vw;
+      padding-top: 36px;
+    }
+    
+    .center ul {
+     width: 100%;
+     height: 20vw;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 15px;
+    }
+    
+    .center ul h5 {
+      width: 55%;
+      height: 15%;
+      color: rgb(5, 5, 5);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      font-style: 1.1em;
+      background-color: white;
+      text-align: center;
+      align-items: end;
+      padding-top: 10px;
+      padding-right: 70px;
+    }
+    
+    
+    .right {
+      width: 30%;
+      color: #fafafa;
+    }
+    
+    .right h5 {
+      margin-bottom: 10px;
+      color: #fafafa;
+    }
+    
+    address {
+      font-style: normal;
+    }
+    .center .h5{
+        background-color: white;
+        color: white;
+        width: 20px;
+        height: 10px;
+        padding-right: 20px;
+    }
+    footer img{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    
+}
